@@ -142,11 +142,8 @@ async def next_page(bot, query):
             reply_markup=InlineKeyboardMarkup(btn)
         )
     await asyncio.sleep(20)
-
- await message.delete()
-
- await msg.delete()
-    
+    await message.delete()
+    await msg.delete() 
 
 @Client.on_callback_query(filters.regex(r"^spolling"))
 async def advantage_spoll_choker(bot, query):
